@@ -1,0 +1,23 @@
+$sp: 470px;  // スマホ
+$imgDir: "../img/";
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+header {
+    background-color: wheat;
+    height: 50px;
+}
+
+main {
+
+    .map {
+        background-image: url("#{$imgDir}bgMap.png");
+    }
+}
+
+footer {
+    background-color: wheat;
+    height: 50px;
+}
