@@ -12,8 +12,29 @@
   <body class="container">
     <header></header>
     <main>
-      <div class="map"></div>
+      <div class="hidden" id="sideMenu">
+        <div class="item">
+          <p>会場</p>
+        </div>
+        <div class="item">
+          <p>飲食店</p>
+        </div>
+        <div class="item">
+          <p>コンビニ</p>
+        </div>
+      </div>
+      <div class="map">
+        <div class="hidden" id="mask"></div><i class="fas fa-bars" id="menu"></i><i class="fas fa-building" id="itnav"></i><i class="fas fa-store-alt" id="lowSon"></i><i class="fas fa-utensils" id="moriya"></i>
+        <div class="hidden" id="pointData">
+          <div class="pic"><img id="target"></div>
+          <div class="info">
+            <ul id="myUL"></ul>
+          </div>
+        </div>
+      </div>
     </main>
     <footer></footer>
+    <script src="js/map.js"></script>
+    <script src="js/pointData.js"></script>
   </body>
 </html>
