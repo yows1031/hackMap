@@ -8,15 +8,41 @@
     const ul = document.querySelector('ul');
     const img = document.querySelector('img');
 
+    const center = document.getElementById('center');
+    const food = document.getElementById('food');
+    const store = document.getElementById('store');
+
     const itnav = document.getElementById('itnav');
     const lowSon = document.getElementById('lowSon');
     const moriya = document.getElementById('moriya');
 
-    menu.addEventListener('click', () => {
-        sideMenu.classList.remove('hidden');
-    })
+    const convenience = [
+        {name:'セブンイレブン', id:"seven"},
+        {name:'ファミリーマート', id:"familymart"},
+        {name:'ミニストップ', id:"ministop"},
+        {name:'ローソン', id:"lowson"}
+    ]
+
+        menu.addEventListener('click', () => {
+            sideMenu.classList.remove('hidden');
+            convenience.forEach((value) =>{
+                const li = document.createElement('li');
+                const newContent = document.createTextNode(value.name);
+                const a = document.createElement('a');
+                a.setAttribute("id", value.id)
+                a.appendChild(newContent)
+                a.classList.add('button.is-info')
+                li.appendChild(a);
+                store.appendChild(li);
+            })
+        })
+
+
 
     sideMenu.addEventListener('click', () => {
+        while (store.firstChild) {
+        store.removeChild(store.firstChild);
+        }
         sideMenu.classList.add('hidden');
     })
 

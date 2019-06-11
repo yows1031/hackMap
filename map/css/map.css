@@ -23,9 +23,15 @@ main #sideMenu {
   z-index: 30;
   background-color: #fff;
   position: absolute;
-  left: 5px;
+  left: 150px;
   width: 250px;
   height: 540px; }
+  main #sideMenu .item {
+    border: 2px solid skyblue;
+    text-align: center;
+    height: 35px;
+    width: 140px;
+    padding-top: 2px; }
 main #sideMenu.hidden {
   top: -800px; }
 main .map {

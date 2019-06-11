@@ -40,9 +40,17 @@ main {
         z-index: 30;
         background-color: #fff;
         position: absolute;
-        left: 140px;
+        left: 150px;
         width: 250px;
         height: 540px;
+
+        .item {
+            border: 2px solid skyblue;
+            text-align: center;
+            height: 35px;
+            width: 140px;
+            padding-top: 2px;
+        }
     }
 
     #sideMenu.hidden {
