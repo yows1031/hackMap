@@ -10,6 +10,17 @@ header {
     height: 100px;
 }
 
+.fas.fa-store {
+    cursor: pointer;
+    font-size: 14pt;
+    color: blue;
+    position: absolute;
+
+    @include sp {
+        font-size: 8pt;
+    }
+}
+
 main {
 
     #mask {
@@ -40,16 +51,52 @@ main {
         z-index: 30;
         background-color: #fff;
         position: absolute;
-        left: 150px;
-        width: 250px;
+        left: 125px;
+        width: 180px;
         height: 540px;
+
+        @include sp {
+            left: 2px;
+            width: 90px;
+            height: 430px;
+        }
 
         .item {
             border: 2px solid skyblue;
             text-align: center;
-            height: 35px;
+            height: 50px;
             width: 140px;
-            padding-top: 2px;
+            padding: auto;
+
+            @include sp {
+                height: 40px;
+                width: 80px;
+                font-size: 10pt;
+            }
+        }
+
+        #center {
+            color: red;
+
+            @include sp {
+                font-size: 9pt;
+            }
+        }
+
+        #food {
+            color: green;
+
+            @include sp {
+                font-size: 9pt;
+            }
+        }
+
+        #store {
+            color: blue;
+
+            @include sp {
+                font-size: 9pt;
+            }
         }
     }
 
@@ -87,16 +134,56 @@ main {
             }
         }
 
-        #lowSon {
+        #station {
             cursor: pointer;
-            font-size: 14pt;
-            color: blue;
+            font-size: 18pt;
+            color: red;
             position: absolute;
+            top: 110px;
+            left: 250px;
+
+            @include sp {
+                font-size: 10pt;
+                top:87px;
+                left:100px;
+            }
+        }
+
+        #seven {
+            top: 147px;
+            left: 385px;
+
+            @include sp {
+                top:109px;
+                left:160px;
+            }
+        }
+
+        #familymart {
+            top: 115px;
+            left: 515px;
+
+            @include sp {
+                top:87px;
+                left:212px;
+            }
+        }
+
+        #ministop {
+            top: 240px;
+            left: 485px;
+
+            @include sp {
+                top:170px;
+                left:205px;
+            }
+        }
+        
+        #lowSon {
             top: 285px;
             left: 550px;
 
             @include sp {
-                font-size: 8pt;
                 top:205px;
                 left:230px;
             }

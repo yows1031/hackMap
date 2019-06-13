@@ -13,20 +13,23 @@ html
     main
       #sideMenu.hidden
         .item
-          p 会場
+          p
+           | 会場
+           br 
+           | 公共施設
         ul#center
         .item
           p 飲食店
         ul#food
         .item
-          p コンビニ
+          p
+           | コンビニ
+           br
+           | その他
         ul#store
-      .map
+      .map#map
         #mask.hidden
         i.fas.fa-bars#menu
-        i.fas.fa-building#itnav
-        i.fas.fa-store-alt#lowSon
-        i.fas.fa-utensils#moriya
         #pointData.hidden
           .pic
             img#target

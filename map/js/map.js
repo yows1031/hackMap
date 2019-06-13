@@ -5,55 +5,121 @@
 
     const mask = document.getElementById('mask');
     const pointData = document.getElementById('pointData');
-    const ul = document.querySelector('ul');
     const img = document.querySelector('img');
+    const myUl = document.getElementById("myUL");
 
-    const center = document.getElementById('center');
-    const food = document.getElementById('food');
-    const store = document.getElementById('store');
+    const centralBuilding = [
+        {name:'イトナブ石巻', id:"itnav"},
+        {name:'石巻駅', id:"station"},
+    ]
 
-    const itnav = document.getElementById('itnav');
-    const lowSon = document.getElementById('lowSon');
-    const moriya = document.getElementById('moriya');
+    const foodShop = [
+        {name:'もりや', id:"moriya"},
+    ]
 
     const convenience = [
         {name:'セブンイレブン', id:"seven"},
         {name:'ファミリーマート', id:"familymart"},
         {name:'ミニストップ', id:"ministop"},
-        {name:'ローソン', id:"lowson"}
+        {name:'ローソン', id:"lowSon"}
     ]
 
-        menu.addEventListener('click', () => {
-            sideMenu.classList.remove('hidden');
-            convenience.forEach((value) =>{
-                const li = document.createElement('li');
-                const newContent = document.createTextNode(value.name);
-                const a = document.createElement('a');
-                a.setAttribute("id", value.id)
-                a.appendChild(newContent)
-                a.classList.add('button.is-info')
-                li.appendChild(a);
-                store.appendChild(li);
-            })
+    const center = document.getElementById('center');
+    const food = document.getElementById('food');
+    const store = document.getElementById('store');
+
+   const map = document.getElementById('map');
+
+    function mapping() {
+
+        centralBuilding.forEach((value, index) => {
+            const i = document.createElement('i');
+            i.classList.add('fas')
+            i.classList.add('fa-building')
+            i.setAttribute("id", value.id);
+            const number = document.createTextNode(index + 1)
+            i.appendChild(number);
+            map.appendChild(i);
+        });
+        
+        foodShop.forEach((value, index) => {
+            const i = document.createElement('i');
+            i.classList.add('fas')
+            i.classList.add('fa-utensils')
+            i.setAttribute("id", value.id);
+            const number = document.createTextNode(index + 1)
+            i.appendChild(number);
+            map.appendChild(i);
+        });
+
+        convenience.forEach((value, index) => {
+            const i = document.createElement('i');
+            i.classList.add('fas')
+            i.classList.add('fa-store')
+            i.setAttribute("id", value.id);
+            const number = document.createTextNode(index + 1)
+            i.appendChild(number);
+            map.appendChild(i);
+        });
+    }
+
+    mapping();
+
+    menu.addEventListener('click', () => {
+        sideMenu.classList.remove('hidden');
+
+        centralBuilding.forEach((value, index) =>{
+            const li = document.createElement('li');
+            const number = document.createTextNode(index + 1);
+            const newContent = document.createTextNode(value.name);
+            li.appendChild(number);
+            li.appendChild(newContent);
+            center.appendChild(li);
         })
+
+        foodShop.forEach((value, index) =>{
+            const li = document.createElement('li');
+            const number = document.createTextNode(index + 1);
+            const newContent = document.createTextNode(value.name);
+            li.appendChild(number);
+            li.appendChild(newContent);
+            food.appendChild(li);
+        })
+
+        convenience.forEach((value, index) =>{
+            const li = document.createElement('li');
+            const number = document.createTextNode(index + 1);
+            const newContent = document.createTextNode(value.name);
+            li.appendChild(number);
+            li.appendChild(newContent);
+            store.appendChild(li);
+        })
+    })
 
 
 
     sideMenu.addEventListener('click', () => {
+        
+        while (center.firstChild) {
+            center.removeChild(center.firstChild);
+        }
+
+        while (food.firstChild) {
+            food.removeChild(food.firstChild);
+        }
+
         while (store.firstChild) {
         store.removeChild(store.firstChild);
         }
         sideMenu.classList.add('hidden');
     })
 
-    // 地図のアイコン
-
     mask.addEventListener('click', () => {
         while (img.firstChild) {
             img.removeChild(img.firstChild);
         }
-        while (ul.firstChild) {
-            ul.removeChild(ul.firstChild);
+        while (myUl.firstChild) {
+            myUl.removeChild(myUl.firstChild);
         }
         mask.classList.add('hidden');
         pointData.classList.add('hidden')
@@ -63,25 +129,11 @@
         while (img.firstChild) {
             img.removeChild(img.firstChild);
         }
-        while (ul.firstChild) {
-            ul.removeChild(ul.firstChild);
+        while (myUl.firstChild) {
+            myUl.removeChild(myUl.firstChild);
         }
         mask.classList.add('hidden');
         pointData.classList.add('hidden')
     })
 
-    itnav.addEventListener('click', () => {
-        mask.classList.remove('hidden');
-        pointData.classList.remove('hidden');
-    })
-
-    lowSon.addEventListener('click', () => {
-        mask.classList.remove('hidden');
-        pointData.classList.remove('hidden');
-    })
-
-    moriya.addEventListener('click', () => {
-        mask.classList.remove('hidden');
-        pointData.classList.remove('hidden');
-    })
 }

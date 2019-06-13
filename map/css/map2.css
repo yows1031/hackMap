@@ -2,13 +2,13 @@ header {
   background-color: wheat;
   height: 100px; }
 
-.fas.fa-store {
+.fas.fa-store-alt {
   cursor: pointer;
   font-size: 14pt;
   color: blue;
   position: absolute; }
   @media (max-width: 470px) {
-    .fas.fa-store {
+    .fas.fa-store-alt {
       font-size: 8pt; } }
 
 main #mask {
@@ -32,40 +32,25 @@ main #sideMenu {
   z-index: 30;
   background-color: #fff;
   position: absolute;
-  left: 125px;
+  left: 150px;
   width: 180px;
   height: 540px; }
-  @media (max-width: 470px) {
-    main #sideMenu {
-      left: 2px;
-      width: 90px;
-      height: 430px; } }
   main #sideMenu .item {
     border: 2px solid skyblue;
     text-align: center;
-    height: 50px;
+    height: 35px;
     width: 140px;
-    padding: auto; }
-    @media (max-width: 470px) {
-      main #sideMenu .item {
-        height: 40px;
-        width: 80px;
-        font-size: 10pt; } }
+    padding-top: 2px; }
+  main #sideMenu #center#food#store {
+    padding-top: 5px;
+    padding-left: 10px;
+    font-size: 14pt; }
   main #sideMenu #center {
     color: red; }
-    @media (max-width: 470px) {
-      main #sideMenu #center {
-        font-size: 9pt; } }
   main #sideMenu #food {
     color: green; }
-    @media (max-width: 470px) {
-      main #sideMenu #food {
-        font-size: 9pt; } }
   main #sideMenu #store {
     color: blue; }
-    @media (max-width: 470px) {
-      main #sideMenu #store {
-        font-size: 9pt; } }
 main #sideMenu.hidden {
   top: -800px; }
 main .map {
@@ -93,39 +78,27 @@ main .map {
         font-size: 10pt;
         top: 255px;
         left: 245px; } }
-  main .map #station {
-    cursor: pointer;
-    font-size: 18pt;
-    color: red;
-    position: absolute;
-    top: 110px;
-    left: 250px; }
-    @media (max-width: 470px) {
-      main .map #station {
-        font-size: 10pt;
-        top: 87px;
-        left: 100px; } }
   main .map #seven {
     top: 147px;
     left: 385px; }
     @media (max-width: 470px) {
       main .map #seven {
-        top: 109px;
-        left: 160px; } }
+        top: 205px;
+        left: 230px; } }
   main .map #familymart {
     top: 115px;
     left: 515px; }
     @media (max-width: 470px) {
       main .map #familymart {
-        top: 87px;
-        left: 212px; } }
+        top: 205px;
+        left: 230px; } }
   main .map #ministop {
     top: 240px;
     left: 485px; }
     @media (max-width: 470px) {
       main .map #ministop {
-        top: 170px;
-        left: 205px; } }
+        top: 205px;
+        left: 230px; } }
   main .map #lowSon {
     top: 285px;
     left: 550px; }
@@ -194,4 +167,4 @@ footer {
   background-color: wheat;
   height: 50px; }
 
-/*# sourceMappingURL=map.css.map */
+/*# sourceMappingURL=map2.css.map */
