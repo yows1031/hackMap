@@ -1,5 +1,7 @@
 'use strict'
 {
+    const whiteBack = 'img/white.png'
+    // モーダルリスト
     const infoItnav = [
         'イトナブ石巻',
         '会場・運営本部',
@@ -53,21 +55,43 @@
         '１１：００〜１６：３０',
         '０２２５−２２−１６６０',
     ];
-    const moriyaImg = 'img/photo.png';
 
     const mask = document.getElementById('mask');
     const pointData = document.getElementById('pointData');
     const target = document.getElementById('target');
 
-
-    const lowSon = document.getElementById('lowSon');
-    const moriya = document.getElementById('moriya');
+    //centralBuilding
     const itnav = document.getElementById('itnav');
-    const station = document.getElementById('station')
+    const eyetopia = document.getElementById('eyetopia');
+    const kawabay = document.getElementById('kawabay');
+    const three = document.getElementById('three');
 
+    //foodShop
+    const moriya = document.getElementById('moriya');
+    const makiishi = document.getElementById('makiishi');
+    const hibari = document.getElementById('hibari');
+    const gingyokusui = document.getElementById('gingyokusui');
+    const sahara = document.getElementById('sahara');
+    const nodaya = document.getElementById('nodaya');
+    const genki = document.getElementById('genki');
+    const marumiya = document.getElementById('marumiya');
+    const syenron = document.getElementById('syenron');
+    const tenkuuan = document.getElementById('tenkuan')
+    const nigonbo = document.getElementById('nigonbo');
+    const dacha = document.getElementById('dacha');
+    const hukko = document.getElementById('hukko');
+    const disco = document.getElementById('disco');
+    const tarutaru = document.getElementById('tarutaru');
+
+    //afterParty&convenience
+    const irori = document.getElementById('irori');
+    const station = document.getElementById('station');
+    const cityHall = document.getElementById('cityHall');
     const seven = document.getElementById('seven');
     const familimart = document.getElementById('familymart')
+    const lowSon = document.getElementById('lowSon');
     const ministop = document.getElementById('ministop');
+    const drug = document.getElementById('drug');
 
     const ul = document.getElementById('myUL');
 
@@ -94,6 +118,12 @@
             ul.appendChild(li);
         })
     });
+
+    function cityHallIcon() {
+        cityHall.classList.remove('fa-store');
+        cityHall.classList.add('fa-building');
+    }
+    cityHallIcon()
 
     seven.addEventListener('click', () => {
         mask.classList.remove('hidden');
@@ -146,7 +176,7 @@
     moriya.addEventListener('click', () => {
         mask.classList.remove('hidden');
         pointData.classList.remove('hidden');
-        target.src = moriyaImg;
+        target.src = whiteBack;
         infoMoriya.forEach((value) =>{
             const li = document.createElement('li');
             const newContent = document.createTextNode(value);

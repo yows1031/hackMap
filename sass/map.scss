@@ -10,6 +10,28 @@ header {
     height: 100px;
 }
 
+.fas.fa-building {
+    cursor: pointer;
+    font-size: 18pt;
+    color: red;
+    position: absolute;
+
+    @include sp {
+        font-size: 10pt;
+    }
+}
+
+.fas.fa-utensils {
+    cursor: pointer;
+    font-size: 14pt;
+    color: green;
+    position: absolute;
+
+    @include sp {
+        font-size: 6pt;
+    }
+}
+
 .fas.fa-store {
     cursor: pointer;
     font-size: 14pt;
@@ -20,6 +42,7 @@ header {
         font-size: 8pt;
     }
 }
+
 
 main {
 
@@ -120,25 +143,59 @@ main {
         }
 
         #itnav {
-            cursor: pointer;
-            font-size: 18pt;
-            color: red;
-            position: absolute;
             top: 355px;
-            left: 580px;
+            left: 595px;
 
             @include sp {
-                font-size: 10pt;
-                top:255px;
-                left:245px;
+                top:262px;
+                left:250px;
             }
         }
 
-        #station {
-            cursor: pointer;
-            font-size: 18pt;
+        #eyetopia {
+            top: 455px;
+            left: 484px;
+
+            @include sp {
+                top: 330px;
+                left: 205px;
+            }
+        }
+
+        #kawabay {
+            top: 450px;
+            left: 590px;
+
+            @include sp {
+                top: 325px;
+                left: 250px;
+            }
+        }
+
+        #three {
+            top: 275px;
+            left: 633px;
+
+            @include sp {
+                top: 200px;
+                left: 270px;
+            }
+        }
+
+
+        #irori {
             color: red;
-            position: absolute;
+            top: 344px;
+            left: 569px;
+
+            @include sp {
+                top:251px;
+                left:239px;
+            }
+        }
+
+
+        #station {
             top: 110px;
             left: 250px;
 
@@ -149,13 +206,37 @@ main {
             }
         }
 
+
+        #station {
+            top: 110px;
+            left: 250px;
+
+            @include sp {
+                font-size: 10pt;
+                top: 87px;
+                left: 100px;
+            }
+        }
+
+        #cityHall {
+            color: blue;
+            top: 195px;
+            left: 195px;
+
+            @include sp {
+                font-size: 10pt;
+                top: 135px;
+                left: 80px;
+            }
+        }
+
         #seven {
             top: 147px;
             left: 385px;
 
             @include sp {
-                top:109px;
-                left:160px;
+                top: 109px;
+                left: 160px;
             }
         }
 
@@ -164,8 +245,8 @@ main {
             left: 515px;
 
             @include sp {
-                top:87px;
-                left:212px;
+                top: 87px;
+                left: 212px;
             }
         }
 
@@ -174,8 +255,8 @@ main {
             left: 485px;
 
             @include sp {
-                top:170px;
-                left:205px;
+                top: 170px;
+                left: 205px;
             }
         }
         
@@ -184,23 +265,168 @@ main {
             left: 550px;
 
             @include sp {
-                top:205px;
-                left:230px;
+                top: 205px;
+                left: 230px;
+            }
+        }
+
+        #drug {
+            top: 380px;
+            left: 550px;
+
+            @include sp {
+                top: 280px;
+                left: 230px;
             }
         }
 
         #moriya {
-            cursor: pointer;
-            font-size: 14pt;
-            color: green;
-            position: absolute;
             top: 440px;
             left: 465px;
 
             @include sp {
-                font-size: 8pt;
-                top:320px;
-                left:193px;
+                top: 320px;
+                left: 193px;
+            }
+        }
+
+        #makiishi {
+            top: 325px;
+            left: 545px;
+
+            @include sp {
+                top: 235px;
+                left: 230px;
+            }
+        }
+
+        #hibari {
+            top: 415px;
+            left: 480px;
+
+            @include sp {
+                top: 297px;
+                left: 197px;
+            }
+        }
+
+        #gingyokusui {
+            top: 415px;
+            left: 445px;
+
+            @include sp {
+                top: 310px;
+                left: 180px;
+            }
+        }
+
+        #sahara {
+            top: 440px;
+            left: 425px;
+
+            @include sp {
+                top: 324px;
+                left: 177px;
+            }
+        }
+
+        #nodaya {
+            top: 480px;
+            left: 425px;
+
+            @include sp {
+                top: 345px;
+                left: 180px;
+            }
+        }
+
+        #genki {
+            top: 480px;
+            left: 575px;
+
+            @include sp {
+                top: 345px;
+                left: 240px;
+            }
+        }
+
+        #marumiya {
+            top: 530px;
+            left: 840px;
+
+            @include sp {
+                top: 370px;
+                left: 354px;
+            }
+        }
+
+        #syenron {
+            top: 205px;
+            left: 262px;
+
+            @include sp {
+                top: 148px;
+                left: 110px;
+            }
+        }
+
+        #tenkuan {
+            top: 270px;
+            left: 425px;
+
+            @include sp {
+                top: 198px;
+                left: 181px;
+            }
+        }
+        
+        #nigonbo {
+            top: 413px;
+            left: 372px;
+
+            @include sp {
+                top: 305px;
+                left: 153px;
+            }
+        }
+
+        #dacha {
+            top: 322px;
+            left: 475px;
+
+            @include sp {
+                top: 234px;
+                left: 196px;
+            }
+        }
+
+        #hukko {
+            top: 460px;
+            left: 425px;
+
+            @include sp {
+                top: 355px;
+                left: 180px;
+            }
+        }
+
+        #disco {
+            top: 415px;
+            left: 545px;
+
+            @include sp {
+                top: 300px;
+                left: 230px;
+            }
+        }
+
+        #tarutaru {
+            top: 240px;
+            left: 555px;
+
+            @include sp {
+                top: 185px;
+                left: 233px;
             }
         }
 
