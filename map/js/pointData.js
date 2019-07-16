@@ -10,6 +10,147 @@
     ];
     const itnavImg = 'img/itnav.png';
 
+    const infoEyetopia = [
+        'アイトピアホール',
+        '発表会場',
+        '０２２５−９２−５１９２',
+    ];
+    const eyetopiaImg = 'img/white.png'
+
+    const infoKawabay = [
+        'かわべいホール',
+        '石巻市かわまち交流センター',
+        'ハッカソン会場',
+        '０２２５−９３−６４４８',
+    ];
+    const kawabayImg = 'img/white.png'
+
+    const infoThree = [
+        '第3ステージ',
+        'BootCanp会場',
+        '１０：００〜２２：００',
+        '０９０−７８８０−２０５２',
+    ];
+    const threeImg = 'img/white.png'
+
+    const infoIrori = [
+        'IRORI 石巻',
+        '懇親会会場',
+        '０２２５−２５−４９５３',
+    ];
+    const iroriImg = 'img/white.png'
+
+    const infoMoriya = [
+        'そば処・もりや',
+        'そば屋',
+        '１１：００〜１６：３０',
+        '０２２５−２２−１６６０',
+    ];
+
+    const infoMakiishi = [
+        'まきいし',
+        '釜飯・ハンバーグ',
+        '１１：００〜１４：００',
+        '０２２５−９３−４６８０',
+    ];
+
+    const infoHibari = [
+        '中国料理 雲雀',
+        '中華料理・餃子',
+        '１１：００〜１４：００',
+        '１７：００〜２１：００',
+        '０２２５−９４−５１７８',
+    ];
+
+    const infogingyokusui = [
+        '銀玉水',
+        '寿司・定食',
+        '１１：００〜２１：００',
+        '０２２５−９３−２２６３',
+    ];
+
+    const infoSahara = [
+        'ラーメン佐原',
+        '１１：００〜１４：３０',
+        '１７：００〜２０：３０',
+        '０２２５−２４−６５５９',
+    ];
+
+    const infoNodaya = [
+        'おにぎり 野田や',
+        '弁当・惣菜',
+        '７：００〜',
+        '０２２５−２２−４４０１',
+    ];
+
+    const infoGenki = [
+        'いしのまき元気市場',
+        'フードコーナー',
+        '１１：００〜２０：００',
+        '０２２５−９８−５５３９',
+    ];
+
+    const infoMarumiya = [
+        '麺屋 丸宮',
+        'ラーメン つけ麺',
+        '１１：００〜１４；３０',
+        '１８：００〜２０：３０',
+        '０２２５−２３−５１６６',
+    ];
+
+    const infoSyenron = [
+        'しぇんろんバード',
+        'ラーメン 焼き鳥',
+        '１１：００〜１４；３０',
+        '１７：００〜２３：３０',
+        '０２２５−９０−３８８９',
+    ];
+
+    const infoTenkuuan = [
+        '天空庵',
+        'そば処 居酒屋',
+        '１１：３０〜１３；３０',
+        '１７：００〜０：００',
+        '０２２５−２５−６４４６',
+    ];
+
+    const infoNigonbo = [
+        'ニゴンボ',
+        'バー',
+        '１９：００〜',
+        '０８０−２８３１−３７１６',
+    ];
+
+    const infoDacha = [
+        '石巻バル Daccha',
+        'バー',
+        '１７：００〜２３：００',
+        '０２２５−９８−４７７９',
+    ];
+
+    const infoHukko = [
+        '復興バー',
+        'バー',
+        '２０：００〜０：００',
+        '０２２５−２５５−４９５３',
+    ];
+
+    const infoDisco = [
+        'カレー屋DISCO',
+        'インドカレー 無国籍料理',
+        '平日１８：００〜２２；００',
+        '土日１２：００〜２２：００',
+    ];
+
+    const infoTarutaru = [
+        'タルタルーガ',
+        'イタリアン',
+        '１１：３０〜１５；００',
+        '１７：００〜２２：００',
+        '０５０−３５８０−３２５４',
+    ];
+    
+
     const infoStation = [
         '石巻駅',
         '路線：仙石線 石巻線',
@@ -49,12 +190,12 @@
     ];
     const lowSonImg = 'img/photo.png';
 
-    const infoMoriya = [
-        'そば処・もりや',
-        'そば屋',
-        '１１：００〜１６：３０',
-        '０２２５−２２−１６６０',
+    const infoDrug = [
+        '星薬局',
+        '０２２５−２２−１５１８',
+        '９：３０〜１８：３０',
     ];
+    const drugImg = 'img/photo.png';
 
     const mask = document.getElementById('mask');
     const pointData = document.getElementById('pointData');
@@ -106,6 +247,55 @@
             ul.appendChild(li);
         })
     });
+
+    eyetopia.addEventListener('click', () => {
+        mask.classList.remove('hidden');
+        pointData.classList.remove('hidden');
+        target.src = eyetopiaImg;
+        infoEyetopia.forEach((value) =>{
+            const li = document.createElement('li');
+            const newContent = document.createTextNode(value);
+            li.appendChild(newContent)
+            ul.appendChild(li);
+        })
+    });
+
+    kawabay.addEventListener('click', () => {
+        mask.classList.remove('hidden');
+        pointData.classList.remove('hidden');
+        target.src = kawabayImg;
+        infoKawabay.forEach((value) =>{
+            const li = document.createElement('li');
+            const newContent = document.createTextNode(value);
+            li.appendChild(newContent)
+            ul.appendChild(li);
+        })
+    });
+
+    three.addEventListener('click', () => {
+        mask.classList.remove('hidden');
+        pointData.classList.remove('hidden');
+        target.src = threeImg;
+        infoThree.forEach((value) =>{
+            const li = document.createElement('li');
+            const newContent = document.createTextNode(value);
+            li.appendChild(newContent)
+            ul.appendChild(li);
+        })
+    });
+
+    irori.addEventListener('click', () => {
+        mask.classList.remove('hidden');
+        pointData.classList.remove('hidden');
+        target.src = iroriImg;
+        infoIrori.forEach((value) =>{
+            const li = document.createElement('li');
+            const newContent = document.createTextNode(value);
+            li.appendChild(newContent)
+            ul.appendChild(li);
+        })
+    });
+
 
     station.addEventListener('click', () => {
         mask.classList.remove('hidden');
@@ -166,6 +356,18 @@
         pointData.classList.remove('hidden');
         target.src = lowSonImg;
         infolowson.forEach((value) =>{
+            const li = document.createElement('li');
+            const newContent = document.createTextNode(value);
+            li.appendChild(newContent)
+            ul.appendChild(li);
+        })
+    });
+
+    drug.addEventListener('click', () => {
+        mask.classList.remove('hidden');
+        pointData.classList.remove('hidden');
+        target.src = drugImg;
+        infoDrug.forEach((value) =>{
             const li = document.createElement('li');
             const newContent = document.createTextNode(value);
             li.appendChild(newContent)

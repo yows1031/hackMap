@@ -27,7 +27,7 @@
         {name:'しぇんろん', id:"syenron"},
         {name:'天空庵', id:"tenkuan"},
         {name:'ニゴンボ', id:"nigonbo"},
-        {name:'DACHA', id:"dacha"},
+        {name:'Daccha', id:"dacha"},
         {name:'復興バー', id:"hukko"},
         {name:'カレー屋ディスコ', id:"disco"},
         {name:'タルタルーガ', id:"tarutaru"},
